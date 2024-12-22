@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmConnect - View Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://th.bing.com/th/id/OIP.SqEE1E8JgzhkODyT8MHDNwHaFj?pid=ImgDet&w=474&h=355&rs=1') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #388e3c;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .navbar-brand:hover {
+      color: #f1f1f1;
+    }
+
+    .container {
+      margin-top: 30px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      border: none;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .btn-back, .btn-update, .btn-delete {
+      color: #fff;
+    }
+
+    .btn-back {
+      background-color: #388e3c;
+    }
+
+    .btn-back:hover {
+      background-color: #2e7d32;
+    }
+
+    .btn-update {
+      background-color: #1976d2;
+    }
+
+    .btn-update:hover {
+      background-color: #1565c0;
+    }
+
+    .btn-delete {
+      background-color: #d32f2f;
+    }
+
+    .btn-delete:hover {
+      background-color: #b71c1c;
+    }
+
+    .product-card {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">FarmConnect</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- View Products Section -->
+    <h2 class="section-title">Your Products</h2>
+
+    <!-- Sample Products -->
+    <div class="row" id="productList">
+      <!-- Product Card 1 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
+          <div class="card-body">
+            <h5 class="card-title">Product Name</h5>
+            <p class="card-text">This is a short description of the product.</p>
+            <p><strong>Price: ₹500</strong></p>
+            <p><strong>Category: Fruits</strong></p>
+            <button class="btn btn-update" onclick="editProduct()">Update</button>
+            <button class="btn btn-delete" onclick="deleteProduct()">Delete</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more product cards dynamically here -->
+    </div>
+
+    <!-- Back to Farmer Home -->
+    <div class="mb-3">
+      <a href="farmer-home.html" class="btn btn-back">Back to Farmer Home</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center mt-5">
+    <p>&copy; 2024 FarmConnect. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function editProduct() {
+      // Placeholder function to handle product updates
+      alert('Edit product functionality coming soon!');
+    }
+
+    function deleteProduct() {
+      // Placeholder function to handle product deletion
+      if (confirm('Are you sure you want to delete this product?')) {
+        alert('Product deleted successfully!');
+        // Add deletion logic here
+      }
+    }
+
+    function loadProducts() {
+      // Placeholder for dynamic product loading logic from backend
+      // Example: Use fetch API to get products from the server
+      console.log('Fetching products...');
+    }
+
+    // Load products on page load
+    window.onload = loadProducts;
+  </script>
+</body>
+</html>
